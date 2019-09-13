@@ -1,2 +1,2 @@
 #!/usr/bin/python3
-import printa
+import python_is_cool
