@@ -1,4 +1,4 @@
-#!/urs/bin/python3
+#!/urs/bin/pytho3
 def print_list_integer(my_list=[]):
     for i in range(len(my_list)):
         str = "{}"
