@@ -5,7 +5,7 @@ if __name__ == "__main__":
 
     inarg = len(sys.argv) - 1
     if inarg != 3:
-        sys.stderr.write("Usage: ./100-my_calculator.py <a> <operator> <b>\n")
+        print("Usage: ./100-my_calculator.py <a> <operator> <b>")
         sys.exit(1)
 
     ope = sys.argv[2]
@@ -21,5 +21,5 @@ if __name__ == "__main__":
     elif ope == '*':
         print("{:d} * {:d} = {:d}".format(a, b, mul(a, b)))
     else:
-        sys.stderr.write("Unknown operator. Available operators: +, -, * and /\n")
+        print("Unknown operator. Available operators: +, -, * and /")
         sys.exit(1)
