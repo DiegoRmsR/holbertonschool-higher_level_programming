@@ -2,14 +2,27 @@
 
 	>>> add_integer(10, 10)
 	20
+
 	>>> add_integer(1.5, 10)
-	12
+	11
+
 	>>> add_integer(2, "Hello")
 	Traceback (most recent call last):
 		  ...
-	raise TypeError("b must be an integer")
+	TypeError: b must be an integer
+
 	>>> add_integer("Hola", 10)
 	Traceback (most recent call last):
 		  ...
-	raise TypeError("a must be an integer")
-	>>> add_integer
+	TypeError: a must be an integer
+	>>> add_integer(6.5, 10)
+	16
+
+	>>> add_integer(10.6, 20.7)
+	30
+
+	>>> add_integer(-5, 20)
+	15
+
+	>>> add_integer(1000, -500)
+	500

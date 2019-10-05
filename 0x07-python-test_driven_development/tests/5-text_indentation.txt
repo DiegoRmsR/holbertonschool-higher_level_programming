@@ -1,0 +1,47 @@
+	>>> text_indentation = __import__('5-text_indentation').text_indentation
+
+	>>> text_indentation("String", 5)
+	Traceback (most recent call last):
+	TypeError: text_indentation() takes 1 positional argument but 2 were given
+
+	>>> text_indentation(5)
+	Traceback (most recent call last):
+	TypeError: text must be a string
+
+	>>> text_indentation("Holberton", "School")
+	Traceback (most recent call last):
+	TypeError: text_indentation() takes 1 positional argument but 2 were given
+
+	>>> text_indentation(-5)
+	Traceback (most recent call last):
+	TypeError: text must be a string
+
+	>>> text_indentation("Holberton School")
+	Holberton School
+
+	>>> text_indentation("Holberton? School: 42. ")
+	Holberton?
+	<BLANKLINE>
+	School:
+	<BLANKLINE>
+	42.
+	<BLANKLINE>
+	<BLANKLINE>
+
+        >>> text_indentation("Holberton? School:. 42. ")
+        Holberton?
+        <BLANKLINE>
+        School:.
+        <BLANKLINE>
+        42.
+        <BLANKLINE>
+        <BLANKLINE>
+
+        >>> text_indentation("Holberton:? School. 42. ")
+        Holberton:?
+        <BLANKLINE>
+        School.
+        <BLANKLINE>
+        42.
+        <BLANKLINE>
+        <BLANKLINE>
