@@ -1,9 +1,6 @@
 #!/usr/bin/python3
-"""
-class Rectangle that defines a rectangle
-"""
 class Rectangle:
-    """  """
+    """ class Rectangle that defines a rectangle """
     def __init__(self, width=0, height=0):
         """ instance method """
         self.width = width
