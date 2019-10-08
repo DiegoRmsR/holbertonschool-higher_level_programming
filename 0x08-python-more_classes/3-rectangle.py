@@ -54,9 +54,9 @@ class Rectangle:
 
     def __str__(self):
         """ Method that returns a rectangle in # """
-        rectangle = ""
         if self.__width == 0 or self.__height == 0:
             return 0
+        rectangle = ""
         for i in range(self.__height):
             for j in range(self.__width):
                 rectangle += "#"
