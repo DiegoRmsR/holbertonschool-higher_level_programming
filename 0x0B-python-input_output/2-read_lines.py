@@ -1,4 +1,4 @@
-#!/usr/bin/python
+#!/usr/bin/python3
 """
 function that reads n lines of a text file (UTF8)
 """
