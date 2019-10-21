@@ -84,8 +84,11 @@ class Rectangle(Base):
         argm += "{}/{}".format(self.width, self.height)
         return "[Rectangle] " + argm
 
-    def update(self, *args):
+    def update(self, *args, **kwargs):
         if len(args) != 0 and args:
             l_attr = ['id', 'width', 'height', 'x', 'y']
             for i in range(len(args)):
                 setattr(self, l_attr[i], args[i])
+        else:
+            for key, value in kwargs.items():
+                setattr(self, key, value)
