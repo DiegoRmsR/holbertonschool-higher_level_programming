@@ -30,7 +30,7 @@ class Square(Rectangle):
         self.__size = value
 
     def update(self, *args, **kwargs):
-        " Method that assigns attributes:"
+        """"Method that assigns attributes:"""
         l_attr = ['id', 'size', 'x', 'y']
         if args and len(args) != 0:
             for i in range(len(args)):
@@ -42,6 +42,8 @@ class Square(Rectangle):
                         setattr(self, key, value)
 
     def to_dictionary(self):
+    """ Method that returns the dictionary
+    representation of a Square"""
         new_d = {
                 "id": self.id, "size": self.size,
                 "x": self.x, "y": self.y
