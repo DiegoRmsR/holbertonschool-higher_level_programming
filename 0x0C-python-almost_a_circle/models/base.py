@@ -84,7 +84,7 @@ class Base:
         new_l = []
         list = []
         if path.exists(filename) is False:
-            return new_l 
+            return new_l
         else:
             with open(filename, 'r') as f:
                 dir_r = f.read()
