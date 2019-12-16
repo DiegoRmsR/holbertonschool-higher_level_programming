@@ -12,9 +12,9 @@ if __name__ == "__main__":
                          db=sys.argv[3])
 
     query = db.cursor()
-    query.execute("SELECT cities.id, cities.name, states.name FROM cities\
-    JOIN states ON states.id = cities.state_id WHERE states.name = %s
-    ORDER BY cities.id ASC;", (sys.argv[4],))
+    query.execute("SELECT cities.id, cities.name, states.name \
+    FROM cities JOIN states ON cities.state_id = states.id \
+    WHERE states.name = '{}';".format(sys.argv[4]))
     states = query.fetchall()
 
     print(", ".join([state[1] for state in states]))
