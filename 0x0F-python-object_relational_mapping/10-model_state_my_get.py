@@ -13,12 +13,12 @@ if __name__ == "__main__":
                            .format(sys.argv[1], sys.argv[2], sys.argv[3]),
                            pool_pre_ping=True)
     Base.metadata.create_all(engine)
-    Session = sessionmaker(bind=engine)
-    s = Session()
-    states = ses.query(State).filter(State.name == sys.argv[4])
-    if not (states.first()):
+    Sesion = sessionmaker(bind=engine)
+    sesion = Sesion()
+    output = sesion.query(State).filter(State.name == sys.argv[4])
+    if not (output.first()):
         print("Not found")
     else:
-        for elem in states:
+        for elem in output:
             print("{}".format(elem.id))
-    s.close()
+    sesion.close()
