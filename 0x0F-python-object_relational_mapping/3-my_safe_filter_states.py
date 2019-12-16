@@ -12,7 +12,7 @@ if __name__ == "__main__":
                          db=sys.argv[3])
     query = db.cursor()
     query.execute("SELECT * FROM states WHERE name=%s\
-                  ORDER BY id ASC;", (sys.argv[4,]))
+                  ORDER BY id ASC;", (sys.argv[4],))
     states = query.fetchall()
     for state in states:
         print(state)
