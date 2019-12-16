@@ -16,10 +16,7 @@ if __name__ == "__main__":
     JOIN states ON states.id = cities.state_id WHERE states.name = %s
     ORDER BY cities.id ASC;", (sys.argv[4],))
     states = query.fetchall()
-    List = []
-    for state in states:
-        List.append(element[0])
-    result = ", ".join(List)
-    print(state)
+
+    print(", ".join([state[1] for state in states]))
     query.close()
     db.close()
