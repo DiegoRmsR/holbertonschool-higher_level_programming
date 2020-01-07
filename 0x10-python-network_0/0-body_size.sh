@@ -1,3 +1,3 @@
 #!/usr/bin/python3
 #cURL body size
-curl -sI "$1" | grep -i Content-Length | awk '{print $2}'
+curl -sI 0.0.0.0:5000 | grep "Content-Length:" | cut -d ' ' -f2
