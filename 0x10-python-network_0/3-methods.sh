@@ -1,3 +1,3 @@
 #!/bin/bash
 # cURL only methods 
-curl -si "$1" | head -3 | tail -1 | cut -d " " -f2-
+curl -sI "$1" | head -n4 | tail -n1 | cut -d " " -f2-
