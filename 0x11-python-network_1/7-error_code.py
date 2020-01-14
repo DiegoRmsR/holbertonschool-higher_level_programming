@@ -9,4 +9,7 @@ import sys
 
 if __name__ == "__main__":
     bad_r = requests.get(sys.argv[1])
-    print("Error code: {}".format(bad_r.status_code))
+    if bad_r.status_code > 309:
+        print("Error code: {}".format(bad_r.status_code))
+    else:
+        print(bad_r.text)
