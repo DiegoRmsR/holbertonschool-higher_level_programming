@@ -3,17 +3,17 @@
  * script that searches the second biggest
  * integer in the list of arguments.
 */
-let l_arg = 0;
+let arg = 0;
 let num = 0;
 let num1 = 0;
 let num2 = 0;
 
-l_arg = process.argv.length;
+arg = process.argv.length;
 
-if (l_arg <= 2 || l_arg === 3) {
+if (arg <= 2 || arg === 3) {
   console.log(0);
 } else {
-  for (let i = 2; i < l_arg; i++) {
+  for (let i = 2; i < arg; i++) {
     num = parseInt(process.argv[i]);
     if (num > num1) {
       num2 = num1;
