@@ -7,10 +7,10 @@ request(process.argv[2], function (err, response, body) {
   } else {
     const newdict = {};
     const jsonb = JSON.parse(body);
-    for (let i = 0; i < json.length; i++) {
+    for (let i = 0; i < jsonb.length; i++) {
       if (jsonb[i].completed === true) {
-	if (jsonb[i].userId in newdict) {
-	  newdict[jsonb[i].userId] += 1;
+        if (jsonb[i].userId in newdict) {
+          newdict[jsonb[i].userId] += 1;
         } else {
           newdict[jsonb[i].userId] = 0;
         }
@@ -19,4 +19,3 @@ request(process.argv[2], function (err, response, body) {
     console.log(newdict);
   }
 });
-	  
