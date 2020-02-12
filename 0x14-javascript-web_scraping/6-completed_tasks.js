@@ -12,7 +12,7 @@ request(process.argv[2], function (err, response, body) {
         if (jsonb[i].userId in newdict) {
           newdict[jsonb[i].userId] += 1;
         } else {
-          newdict[jsonb[i].userId] = 0;
+          newdict[jsonb[i].userId] = 1;
         }
       }
     }
