@@ -10,7 +10,7 @@ request(process.argv[2], function (err, response, body) {
     for (let i = 0; i < results.length; i++) {
       const characters = results[i].characters;
       for (let j = 0; j < characters.length; j++) {
-        if (characters[j].search('18')) {
+        if (characters[j].includes('18')) {
           count++;
         }
       }
